@@ -10,10 +10,13 @@ import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
+
+import org.w3c.dom.CDATASection;
 
 import com.larka.commandInput.CommandInputMannager;
 
@@ -109,7 +112,7 @@ public class MainWindow implements ActionListener{
 		button.setFocusable(false);
 	}
 	
-	public void buttonPaneSpawner(String frameName) {
+	public JFrame buttonPaneSpawner(String frameName) {
 		JFrame fileFrame = new JFrame();
 		fileFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		fileFrame.setSize(300, 600);
@@ -117,22 +120,34 @@ public class MainWindow implements ActionListener{
 		fileFrame.getContentPane().setBackground(defaultPanelColor);
 		fileFrame.setTitle(frameName);
 		fileFrame.setVisible(true);
+		return fileFrame;
 		
+	}
+	public void dropMenue(String[] optionStrings, JFrame button) {
+		final JComboBox<String> cb = new JComboBox<String>(optionStrings);
+		cb.setBackground(defaultPanelColor);
+		cb.setForeground(defaultElementColor);
+		cb.setFont(defaultFont);
+		cb.setSize(new Dimension(100, 200));
+		cb.setVisible(true);
+		button.add(cb);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == fileButton) {
-//			fileButtonSpawner();
-			buttonPaneSpawner("File Options");
+			JFrame optionFrame = buttonPaneSpawner("File Options");
+			String[] fileButtonMenueStrings = {"OPtion1", "OPtion2", "OPtion3", "OPtion4"};
+			dropMenue(fileButtonMenueStrings, optionFrame);
+			
 		}
-		if (e.getSource() == editButton) {
+		else if (e.getSource() == editButton) {
 			buttonPaneSpawner("Edit Options");
 		}
-		if (e.getSource() == windowButton) {
+		else if (e.getSource() == windowButton) {
 			buttonPaneSpawner("Window options");
 		}
-		if (e.getSource() == helpButton) {
+		else if (e.getSource() == helpButton) {
 			buttonPaneSpawner("Help options");
 		}
 	}
