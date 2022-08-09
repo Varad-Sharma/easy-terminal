@@ -28,6 +28,7 @@ public class FileEditor implements ActionListener{
 	CommandInputMannager commandInputMannager = new CommandInputMannager();
 	MainWindow mainWindow = new MainWindow();
 	
+	
 	public boolean hasSaved = false;
 
 	public FileEditor() {

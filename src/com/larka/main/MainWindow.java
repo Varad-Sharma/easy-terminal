@@ -98,7 +98,7 @@ public class MainWindow implements ActionListener{
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.setSize(1000, 600);
 		mainFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-		mainFrame.setTitle("Project Larka *in development*");
+		mainFrame.setTitle("Easy Terminal (Project Larka)  -Discontinued");
 		mainFrame.getContentPane().setBackground(new Color(0x474747));
 		mainFrame.setLayout(new BorderLayout(5,5));
 		mainFrame.setVisible(true);
@@ -123,22 +123,13 @@ public class MainWindow implements ActionListener{
 		return fileFrame;
 		
 	}
-	public void dropMenue(String[] optionStrings, JFrame button) {
-		final JComboBox<String> cb = new JComboBox<String>(optionStrings);
-		cb.setBackground(defaultPanelColor);
-		cb.setForeground(defaultElementColor);
-		cb.setFont(defaultFont);
-		cb.setSize(new Dimension(100, 200));
-		cb.setVisible(true);
-		button.add(cb);
-	}
+	//Discontinued Idea-Dropdown pane for options window
+
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == fileButton) {
-			JFrame optionFrame = buttonPaneSpawner("File Options");
-			String[] fileButtonMenueStrings = {"OPtion1", "OPtion2", "OPtion3", "OPtion4"};
-			dropMenue(fileButtonMenueStrings, optionFrame);
+			buttonPaneSpawner("File Options");
 			
 		}
 		else if (e.getSource() == editButton) {

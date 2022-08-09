@@ -85,6 +85,15 @@ public class CommandLibraryMannager {
 //			fileHandeler.fileEditor();
 			new FileEditor();
 		}
+		else if (commandString.equals("clear")) {
+			commandOutputArea.setText("");
+		}
+		else if (commandString.equals("exit")) {
+			System.exit(0);
+		}
+		else if (commandString.equals("about")) {
+			commandOutputArea.setText("This version of easy terminal(Code Nameed: Larka)\n will be rewritten in rust for better runtime capability and native support for OS\n\n The new version will be announced on Discord/Reddit/Instagram/Twitter");
+		}
 		
 		else {
 			commandOutputArea.setForeground(Color.RED);
