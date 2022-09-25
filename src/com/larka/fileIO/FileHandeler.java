@@ -1,22 +1,22 @@
 package com.larka.fileIO;
 
-import java.awt.BorderLayout;
+// import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+// import java.awt.Dimension;
+// import java.awt.event.ActionEvent;
+// import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.FileWriter;
+// import java.io.FileWriter;
 import java.io.IOException;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+// import javax.swing.JButton;
+// import javax.swing.JFrame;
+// import javax.swing.JLabel;
 import javax.swing.JTextArea;
 
 import com.larka.commandInput.CommandInputMannager;
 import com.larka.main.MainWindow;
-import com.larka.fileIO.editor.FileEditor;
+// import com.larka.fileIO.editor.FileEditor;
 
 public class FileHandeler{
 	

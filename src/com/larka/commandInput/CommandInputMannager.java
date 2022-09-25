@@ -32,14 +32,13 @@ public class CommandInputMannager implements ActionListener{
 //	public boolean usedOnce = false;
 	
 	public CommandInputMannager() {
-		submitCommandButton.setText("Submit");
+		submitCommandButton.setText("Run");
 		submitCommandButton.addActionListener(this);
 		submitCommandButton.setBackground(MainWindow.defaultElementColor);
 		submitCommandButton.setForeground(Color.WHITE);
 		submitCommandButton.setPreferredSize(new Dimension(150, 5));
 		submitCommandButton.setFocusable(false);
 //		submitCommandButton.setBorder(BorderFactory.createEmptyBorder());
-		
 		
 		commandInputFeild.setPreferredSize(new Dimension(500, 50));
 		commandInputFeild.setBackground(MainWindow.defaultElementColor);
